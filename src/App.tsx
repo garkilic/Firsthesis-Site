@@ -58,13 +58,13 @@ function App() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
-              Trusted by Leading Financial Institutions
+              For Accredited Investors Only
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-              Transform Your Capital into a Venture Fund
+              Launch Your VC Fund in Minutes, Not Months
             </h1>
             <p className="text-xl md:text-2xl text-secondary mb-8 leading-relaxed">
-              AI-powered platform that lets anyone become a venture investor at the push of a button.
+              Turn your $1M+ net worth into a venture fund instantly. Our AI handles everything from fund creation to investment decisions, letting you focus on what matters most.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.button 
@@ -152,6 +152,183 @@ function App() {
             <div className="inline-flex items-center gap-2 text-accent font-medium">
               <SparklesIcon className="w-5 h-5" />
               <span>Powered by Advanced Machine Learning</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Traditional VC Challenges Section */}
+      <section className="section bg-white">
+        <div className="container">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Why Traditional VC Firms Are Hard to Start
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-accent/10 rounded-xl">
+                  <UserGroupIcon className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Large Team Required</h3>
+                  <p className="text-secondary">Traditional VC firms typically need <span className="font-bold text-primary">10-15 people</span> to operate effectively, including partners, analysts, and support staff.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-accent/10 rounded-xl">
+                  <BanknotesIcon className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">High Operational Costs</h3>
+                  <p className="text-secondary">Annual operating costs can exceed <span className="font-bold text-primary">$1M</span>, including office space, salaries, and administrative expenses.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-accent/10 rounded-xl">
+                  <ChartBarIcon className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Complex Fundraising</h3>
+                  <p className="text-secondary">Raising a traditional VC fund requires extensive networking and typically <span className="font-bold text-primary">$50M+</span> in commitments from limited partners.</p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-3xl"></div>
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-center mb-6">How Firsthesis Makes It Different</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <StarIcon className="w-5 h-5 text-accent" />
+                      <span className="text-secondary">Start with just <span className="font-bold text-primary">$1M</span> in capital</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <StarIcon className="w-5 h-5 text-accent" />
+                      <span className="text-secondary">AI handles <span className="font-bold text-primary">80%</span> of operational tasks</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <StarIcon className="w-5 h-5 text-accent" />
+                      <span className="text-secondary">Potential for <span className="font-bold text-primary">2% management fee + 20% carry</span></span>
+                    </div>
+                  </div>
+                  <div className="mt-8 p-4 bg-accent/5 rounded-xl">
+                    <h4 className="font-semibold mb-2 text-primary">Experts-in-the-Loop</h4>
+                    <p className="text-secondary">Our AI is backed by a team of <span className="font-medium">experienced venture capitalists</span> who review and validate all investment decisions before execution.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Historical Returns Section */}
+      <section className="section bg-gradient-to-b from-white to-gray-50">
+        <div className="container">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            The Power of Early-Stage Investing
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                company: "Uber",
+                seed: "$200K",
+                current: "$1.2B",
+                return: "600,000%",
+                icon: SparklesIcon,
+                context: "In 2010, First Round Capital invested $200K in Uber's seed round. This investment would have grown to $1.2B by the company's IPO, demonstrating the massive potential of early-stage tech investments.",
+              },
+              {
+                company: "Airbnb",
+                seed: "$20K",
+                current: "$1.2B",
+                return: "6,000,000%",
+                icon: StarIcon,
+                context: "Sequoia Capital's $20K investment in Airbnb's seed round in 2009 would have grown to $1.2B by the company's IPO, showcasing how small early investments can lead to extraordinary returns.",
+              },
+              {
+                company: "Stripe",
+                seed: "$2M",
+                current: "$95B",
+                return: "4,750,000%",
+                icon: ChartBarIcon,
+                context: "Stripe's seed round in 2011 included a $2M investment that would have grown to $95B by their latest valuation, making it one of the most successful early-stage investments in tech history.",
+              },
+            ].map((company, index) => (
+              <motion.div
+                key={company.company}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 bg-accent/10 rounded-xl">
+                    <company.icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary">{company.company}</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-secondary">Seed Investment</span>
+                    <span className="font-bold text-primary">{company.seed}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-secondary">Current Value</span>
+                    <span className="font-bold text-primary">{company.current}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-secondary">Return on Investment</span>
+                    <span className="font-bold text-accent">{company.return}</span>
+                  </div>
+                </div>
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <p className="text-sm text-secondary leading-relaxed">
+                    {company.context}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <p className="text-lg text-secondary mb-6">
+              Don't miss out on the next big opportunity. Our AI-powered platform helps you identify and invest in promising startups early.
+            </p>
+            <div className="inline-flex items-center gap-2 text-accent font-medium">
+              <SparklesIcon className="w-5 h-5" />
+              <span>Powered by Advanced Market Analysis</span>
             </div>
           </motion.div>
         </div>
@@ -286,88 +463,6 @@ function App() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Platform Overview</h3>
                   <p className="text-secondary">A comprehensive walkthrough of Firsthesis's key features and capabilities.</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Security Section */}
-      <section className="section bg-gradient-to-b from-white to-gray-50">
-        <div className="container">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16"
-          >
-            Enterprise-Grade Security
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-accent/10 rounded-xl">
-                  <ShieldCheckIcon className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Bank-Level Encryption</h3>
-                  <p className="text-secondary">256-bit SSL encryption and multi-factor authentication protect your investments.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-accent/10 rounded-xl">
-                  <DocumentTextIcon className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Regulatory Compliance</h3>
-                  <p className="text-secondary">Adhering to SEC guidelines and maintaining strict compliance standards.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-accent/10 rounded-xl">
-                  <ChartBarIcon className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Real-Time Monitoring</h3>
-                  <p className="text-secondary">24/7 security monitoring and automated fraud detection systems.</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-secondary">Security Score</div>
-                    <div className="text-2xl font-bold text-accent">98/100</div>
-                  </div>
-                  <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-accent rounded-full" style={{ width: '98%' }}></div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 mt-6">
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-primary">99.9%</div>
-                      <div className="text-sm text-secondary">Uptime</div>
-                    </div>
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-primary">0</div>
-                      <div className="text-sm text-secondary">Security Incidents</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.div>
